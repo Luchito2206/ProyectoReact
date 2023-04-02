@@ -5,4 +5,20 @@
     display: flex;
     justify-content: space-between;
     background-color: rgb(103,183,216);
+    Padding: 4px 20px;
+    align-items: center;
+    position: relative;
+    Box-sizing: border-box;
+}
+
+.containerNavbarUL{
+    display: "flex";
+    gap: "30px";
+    list-style: “none”;
+    Flex-grow: 1;
+}
+
+.containerNavbarLI{
+    Display: inline-block;
+    margin-left: 12px;
 }

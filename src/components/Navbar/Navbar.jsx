@@ -11,11 +11,12 @@ export const Navbar = () => {
       <img
         src="https://res.cloudinary.com/diwpmquqv/image/upload/v1680453663/samples/ecommerce/shoes.png"
         alt="Este es el logo de la empresa"
+        style={{height:"100%"}}
       />
-      <ul style={{ display: "flex", gap: "30px" }}>
-        <li>Todas</li>
-        <li>Urbanas</li>
-        <li>Deportivas</li>
+      <ul className={styles.containerNavbarUL}>
+        <li className={styles.containerNavbarLI}>Todas</li>
+        <li className={styles.containerNavbarLI}>Urbanas</li>
+        <li className={styles.containerNavbarLI}>Deportivas</li>
       </ul>
       <CartWidget />
     </div>
