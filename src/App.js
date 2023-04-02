@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
-import { Login } from "./Login"
+import { useState } from "react";
+import "./App.css";
+
+import CounterContainer from "./components/Counter/CounterContainer";
+
+import ItemListContainer from "./components/ItemList/ItemListContainer";
+import { Navbar } from "./components/Navbar/Navbar";
 
 function App() {
+  const [mostrar, setMostrar] = useState(false)
+
+  const [saludo, setSaludo] = useState("hola pépito")
+
+  const changeState = ()=>{
+    setMostrar( !mostrar )
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <button onClick={changeState} >Montar y desmontar component</button>
+      {
+        mostrar ? <ItemListContainer saludo={saludo}/> : null
+      }
+
+      <button onClick={()=> setSaludo("hola juancito")}>cambiar saludo</button>
+
+      {/* <CounterContainer /> */}
+
     </div>
   );
 }
