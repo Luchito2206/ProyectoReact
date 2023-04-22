@@ -1,24 +1,23 @@
-// import "./Navbar.css"
-
 import CartWidget from "../CartWidget/CartWidget";
 import styles from "./Navbar.module.css";
-
-// import imgLogo from "../../assets/images/imagesZapa.jpg";
+import { Outlet, Link } from "react-router-dom";
 
 export const Navbar = () => {
   return (
-    <div className={styles.containerNavbar}>
-      <img
-        src="https://res.cloudinary.com/diwpmquqv/image/upload/v1680453663/samples/ecommerce/shoes.png"
-        alt="Este es el logo de la empresa"
-        style={{height:"100%"}}
-      />
-      <ul className={styles.containerNavbarUL}>
-        <li className={styles.containerNavbarLI}>Todas</li>
-        <li className={styles.containerNavbarLI}>Urbanas</li>
-        <li className={styles.containerNavbarLI}>Deportivas</li>
-      </ul>
-      <CartWidget />
+    <div>
+      <div className={styles.containerNavbar}>
+        <Link to="/">Comision 39650</Link>
+
+        <div className={styles.categories}>
+          <Link to="/">Todas</Link>
+          <Link to="/category/deportivas">Deportivas</Link>
+          <Link to="/category/urbanas">Urbanas</Link>
+        </div>
+
+        <CartWidget />
+      </div>
+
+      <Outlet />
     </div>
   );
 };

@@ -1,33 +1,24 @@
-import { useState } from "react";
-import "./App.css";
-
-import CounterContainer from "./components/Counter/CounterContainer";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemListContainer from "./components/ItemList/ItemListContainer";
+import { ItemDetailContainer } from "./components/ItemDetail/ItemDetailContainer";
 import { Navbar } from "./components/Navbar/Navbar";
+import CartContainer from "./components/Cart/CartContainer";
+import Form from "./components/Form/Form";
 
 function App() {
-  const [mostrar, setMostrar] = useState(false)
-
-  const [saludo, setSaludo] = useState("hola pépito")
-
-  const changeState = ()=>{
-    setMostrar( !mostrar )
-  }
-
   return (
-    <div className="App">
-      <Navbar />
-      <button onClick={changeState} >Montar y desmontar component</button>
-      {
-        mostrar ? <ItemListContainer saludo={saludo}/> : null
-      }
-
-      <button onClick={()=> setSaludo("hola juancito")}>cambiar saludo</button>
-
-      {/* <CounterContainer /> */}
-
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Navbar />}>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/category/:categoryName" element={<ItemListContainer />} />
+          <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
+          <Route path="/cart" element={ <CartContainer /> } />
+          <Route path="/form" element={<Form />} />
+          <Route path="*" element={<h1>La ruta no existe</h1>} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
