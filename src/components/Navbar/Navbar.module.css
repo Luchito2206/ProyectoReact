@@ -3,7 +3,7 @@
   height: 10vh;
   display: flex;
   justify-content: space-between;
-  background-color: steelblue;
+  background-color: rgb(0, 6, 78);
   align-items: center;
   padding: 10px;
 }
@@ -21,9 +21,9 @@ a {
   gap: 20px;
 }
 .categories a {
-  background-color: beige;
+  background-color: #ffe44d;
   padding: 10px 20px;
-  color: #7F669D;
+  color: #00058b;
   width: 100px;
   display: flex;
   justify-content: center;

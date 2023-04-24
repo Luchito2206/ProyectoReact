@@ -6,7 +6,7 @@ export const Navbar = () => {
   return (
     <div>
       <div className={styles.containerNavbar}>
-        <Link to="/">Comision 39650</Link>
+        <Link to="/">Proyecto REACT</Link>
 
         <div className={styles.categories}>
           <Link to="/">Todas</Link>
