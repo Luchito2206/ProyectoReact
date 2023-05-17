@@ -1,34 +1,56 @@
 import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
-import { products } from "../../productsMock";
 
 import { useParams } from "react-router-dom";
+import { PropagateLoader } from "react-spinners";
+import { db } from "../../firebaseConfig";
+
+import { getDocs, collection, query, where } from "firebase/firestore";
 
 const ItemListContainer = () => {
+  const [items, setItems] = useState([]);
 
-  const [ items , setItems ] = useState([])
+  const { categoryName } = useParams();
 
-  const { categoryName } = useParams()
-  
+  useEffect(() => {
+    let consulta;
+    const itemCollection = collection(db, "products");
 
-  useEffect( ()=>{
+    if (categoryName) {
+      const itemsCollectionFiltered = query(
+        itemCollection,
+        where("category", "==", categoryName)
+      );
+      consulta = itemsCollectionFiltered;
+    } else {
+      consulta = itemCollection;
+    }
 
-    const productsFiltered = products.filter( prod => prod.category === categoryName)
+    getDocs(consulta)
+      .then((res) => {
+        const products = res.docs.map((product) => {
+          // console.log(product.data(), product.id)
+          return {
+            ...product.data(),
+            id: product.id,
+          };
+        });
 
-    const tarea = new Promise((resolve, reject) => {
-      resolve( categoryName ? productsFiltered : products );
-    });
-  
-    tarea
-      .then((res) => setItems(res))
-      .catch((error) => console.log(error));
-      
-  },[categoryName])
-
+        setItems(products);
+      })
+      .catch((err) => console.log(err));
+  }, [categoryName]);
 
   return (
     <div>
-      <ItemList items={items} />
+      <h1>Este es el proyecto</h1>
+      {items.length === 0 ? (
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <PropagateLoader color="steelblue" size={40} />
+        </div>
+      ) : (
+        <ItemList items={items} />
+      )}
     </div>
   );
 };
