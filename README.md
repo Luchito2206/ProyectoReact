@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Proyecto final React
+Este proyecto es un e-commerce de aviones que te permite explorar y comprar una amplia variedad de aviones para diferentes propósitos y necesidades. Desde aviones comerciales hasta aviones privados y de carga, nuestro catálogo ofrece una amplia selección para satisfacer las demandas de los entusiastas de la aviación, pilotos profesionales y empresas de transporte.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descripción
+El objetivo principal de este e-commerce es proporcionar a los usuarios una plataforma intuitiva y fácil de usar para explorar y comprar aviones. El sitio web cuenta con una interfaz moderna y atractiva que permite a los visitantes navegar por categorías, ver detalles de los aviones, realizar compras y realizar un seguimiento de sus pedidos.
 
-## Available Scripts
+## Características Principales
+- ✈️ Catálogo de Aviones: El e-commerce ofrece un amplio catálogo de aviones clasificados en diferentes categorías, como aviones comerciales, aviones privados, aviones de carga, etc. Los usuarios pueden explorar y filtrar los aviones según sus preferencias y necesidades.
 
-In the project directory, you can run:
+- ✈️ Detalles de los Aviones: Cada avión en el catálogo tiene su propia página de detalles que proporciona información completa sobre el modelo, características técnicas, capacidad, rendimiento y más. Los usuarios pueden ver imágenes de alta calidad y obtener información detallada antes de tomar una decisión de compra.
 
-### `npm start`
+- ✈️ Carrito de Compras: Los usuarios pueden agregar aviones al carrito de compras y realizar múltiples compras al mismo tiempo. Pueden ajustar las cantidades y eliminar elementos del carrito según sea necesario.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Tecnologías Utilizadas
+El proyecto se desarrolló utilizando las siguientes tecnologías y herramientas:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Front-end: HTML, CSS, JavaScript, React.js
+- Base de Datos: Firebase
+- Gestión de Versiones: Git, GitHub
 
-### `npm test`
+### Librerías utilizadas:
+- Formik
+- YUP
+- Sweetalert2
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Instalación y Uso
+Si deseas configurar el proyecto en tu entorno local, sigue los siguientes pasos:
 
-### `npm run build`
+- Clona el repositorio del proyecto desde GitHub.
+- Navega a la carpeta del proyecto e instala las dependencias ejecutando npm install.
+- Configura la conexión a la base de datos FireBase en el archivo de configuración correspondiente.
+- Inicia el servidor local ejecutando npm start.
+- Abre tu navegador web y accede a http://localhost:3000 para ver el e-commerce de aviones en funcionamiento.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Si queres usar este proyecto necesitas las siguientes variables de entorno, pero antes deberas crear el archivo .env y asignarle lo siguiente
+- REACT_APP_APIKEY=
+- REACT_APP_AUTHDOMAIN=
+- REACT_APP_PROYECTID=
+- REACT_APP_STORAGEBUCKET=
+- REACT_APP_MESSAGINGSENDERID=
+- REACT_APP_APPID=
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### Contacto
+Si tienes alguna pregunta, consulta o comentario relacionado con el proyecto, no dudes en ponerte en contacto con nosotros. Puedes enviar un correo electrónico a lucianopalacioslongo@gmail.com .
