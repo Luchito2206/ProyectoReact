@@ -5,6 +5,7 @@
     align-items: center;
     position: relative;
     color: beige;
+    margin-top: 10px;
 }
 .bubble-counter{
     width: 30px;

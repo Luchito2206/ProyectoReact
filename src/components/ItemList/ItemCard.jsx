@@ -13,9 +13,9 @@ import { Link } from "react-router-dom";
 
 const ItemCard = ({ item }) => {
   return (
-    <Card sx={{ width: 345, height: 350 }}>
-      <CardMedia sx={{ height: 140 }} image={item.img} title="green iguana" />
-      <CardContent sx={{ height: 150 }}>
+    <Card sx={{ width: 425, height: 425 }}>
+      <CardMedia sx={{ height: 200 }} image={item.img} title="green iguana" />
+      <CardContent sx={{ height: 160 }}>
         <Typography
           gutterBottom
           variant="h5"
@@ -24,11 +24,11 @@ const ItemCard = ({ item }) => {
         >
           {item.title}
         </Typography>
-        <Typography variant="h6" color="text.secondary" textAlign={"center"}>
+        <Typography  fontSize={"16px"} color="black" textAlign={"center"}>
           {item.description}
         </Typography>
         <Typography variant="subtitle1" textAlign={"center"}>
-          ${item.price}.-
+          U$S{item.price}.-
         </Typography>
       </CardContent>
       <CardActions style={{ display: "flex", justifyContent: "center" }}>

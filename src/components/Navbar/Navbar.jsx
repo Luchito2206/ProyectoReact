@@ -27,8 +27,7 @@ export const Navbar = () => {
   return (
     <div>
       <div className={styles.containerNavbar}>
-        <Link to="/">Comision 39650</Link>
-
+        <Link to="/"><img src="https://res.cloudinary.com/diwpmquqv/image/upload/v1684450773/airplanes/avion3.png" alt="" className={styles.logo}/></Link>
         <div className={styles.categories}>
           {categories.map((category) => {
             return (
