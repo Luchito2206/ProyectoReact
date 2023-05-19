@@ -13,17 +13,17 @@ const CartContainer = () => {
 
   const clearCartWithAlert = ()=>{
     Swal.fire({
-      title: 'Seguro que quieres eliminar todo el carrito?',
+      title: '¿Seguro que quieres eliminar todo el carrito?',
       showDenyButton: true,
       showCancelButton: false,
-      confirmButtonText: 'si, eliminar',
-      denyButtonText: `no, no eliminar`,
+      confirmButtonText: 'Si, eliminar',
+      denyButtonText: `No, no eliminar`,
     }).then((result) => {
       if (result.isConfirmed) {
         clearCart()
-        Swal.fire('Se limpio el carrito', '', 'success')
+        Swal.fire('Se limpió el carrito', '', 'success')
       } else if (result.isDenied) {
-        Swal.fire('el carrito queda como estaba', '', 'error')
+        Swal.fire('El carrito queda como estaba', '', 'error')
       }
     })
   }

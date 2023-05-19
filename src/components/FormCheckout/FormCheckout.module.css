@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Special+Elite&display=swap');
+
+.containerAllForm {
+    width: 100%;
+    margin-top: 20px;
+    font-family: 'Special Elite', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .containerAllFormText {
+    width: 90%;
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 8px solid #04182e;
+    border-radius: 25px;
+    background-color: whitesmoke;
+    margin-bottom: 10px; /* Ajusta el margen inferior según tus necesidades */
+  }
+  
+  .icon {
+    width: 40px; /* Ajusta el tamaño del icono según tus necesidades */
+    height: 40px; /* Ajusta el tamaño del icono según tus necesidades */
+    margin-top: -10px; /* Ajusta el margen superior según tus necesidades */
+    margin-right: 10px; /* Ajusta el margen derecho según tus necesidades */
+  }
+  
+  .containerAllFormText > h3 {
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  
+  

@@ -20,8 +20,8 @@ const Cart = ({
                 <img src={item.img} alt="" />
                 <div className="cart-item-info">
                   <h2>{item.name}</h2>
-                  <h2>${item.price}.-</h2>
-                  <h2>Unidades: {item.quantity}</h2>
+                  <h2>U$S {item.price.toLocaleString()} -</h2>
+                  <h2>Unidades: {item.quantity} </h2>
                 </div>
                 <Button
                   variant="contained"
@@ -36,7 +36,7 @@ const Cart = ({
         <div className="cart-info">
           <h2>Descripcion del carrito:</h2>
           <h3>Cantidad de productos: </h3>
-          <h3>Precio total: {total}</h3>
+          <h3>Precio total: U$S {total.toLocaleString()}</h3>
           <h3>Descuento: </h3>
           <h3>Precio final: </h3>
           {cart.length > 0 ? (
@@ -54,7 +54,7 @@ const Cart = ({
             </Link>
           )}
 
-          <h1>El total del carrito es ${total}</h1>
+          <h2>El total del carrito es U$S{total.toLocaleString()}</h2>
         </div>
       </div>
     </div>

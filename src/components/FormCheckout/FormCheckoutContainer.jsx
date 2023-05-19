@@ -1,9 +1,8 @@
 import React, { useContext, useState } from "react";
 import FormCheckout from "./FormCheckout";
-
 import { useFormik } from "formik";
-
 import * as Yup from "yup";
+import styles from "./FormCheckout.module.css";
 import { CartContext } from "../../context/CartContext";
 import { db } from "../../firebaseConfig";
 
@@ -63,12 +62,13 @@ export const FormCheckoutContainer = () => {
   });
 
   return (
-    <div>
+    <div className={styles.containerAllForm}>
       {orderId ? (
-        <h3>
-          Gracias por tu compra el numero de compra es {orderId}, por favor
-          guardalo para cualquier cosa
-        </h3>
+       <h3 className={styles.containerAllFormText}>
+       <img src="https://res.cloudinary.com/diwpmquqv/image/upload/v1684447274/airplanes/avion2.png" alt="Icono" className={styles.icon} />
+       Gracias por tu compra.<br></br>El número de compra es {orderId}, por favor guárdalo para cualquier cosa.
+       <img src="https://res.cloudinary.com/diwpmquqv/image/upload/v1684447274/airplanes/avion2.png" alt="Icono" className={styles.icon} />
+     </h3>
       ) : (
         <FormCheckout
           errors={errors}

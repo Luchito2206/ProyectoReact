@@ -19,9 +19,12 @@ export const ItemDetail = ({ product, onAdd, cantidadTotal }) => {
             <span style={{ fontSize: "23px" }}>Descripcion:</span>{" "}
             {product.description}
           </h2>
-          <h2 style={{}}>
-            <span style={{ fontSize: "23px" }}>Precio:</span> U$S{product.price}.-
-          </h2>
+          {product && product.price?.toLocaleString() && (
+            <h2>
+              <span style={{ fontSize: "23px" }}>Precio:</span>{" "}
+              U$S {product.price.toLocaleString()} -
+            </h2>
+          )}
         </div>
       </div>
       {

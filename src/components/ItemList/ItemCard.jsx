@@ -1,5 +1,5 @@
 import React from "react";
-
+import styles from "./ItemCard.module.css";
 import {
   Button,
   Card,
@@ -27,8 +27,8 @@ const ItemCard = ({ item }) => {
         <Typography  fontSize={"16px"} color="black" textAlign={"center"}>
           {item.description}
         </Typography>
-        <Typography variant="subtitle1" textAlign={"center"}>
-          U$S{item.price}.-
+        <Typography className={`${styles.moneyValue} boldText`}>
+          U$S {item.price.toLocaleString()} -
         </Typography>
       </CardContent>
       <CardActions style={{ display: "flex", justifyContent: "center" }}>

@@ -33,7 +33,7 @@ const FormCheckout = ({ handleSubmit, handleChange, errors, values }) => {
           <Grid item xs={11} sm={7}>
             <TextField
               id="outlined-basic"
-              label="Phone"
+              label="Teléfono"
               variant="outlined"
               fullWidth
               name="phone"
